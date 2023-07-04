@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "cd8fef8d-358e-42d3-a858-09e518c5e45c",
+		"name": "SWAPI-Planets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23350668",
+		"_collection_link": "https://www.postman.com/warped-shadow-696364/workspace/api/collection/23350668-cd8fef8d-358e-42d3-a858-09e518c5e45c?action=share&creator=23350668&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Выбрать все планееты",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Выбрать планету по ID(В данном случае 4)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/1/",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Увидеть схему JSON для планет.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/schema",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						"schema"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
