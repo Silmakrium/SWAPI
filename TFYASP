@@ -1,14 +1,14 @@
 {
 	"info": {
 		"_postman_id": "cd8fef8d-358e-42d3-a858-09e518c5e45c",
-		"name": "SWAPI-Planets",
+		"name": "SWAPI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "23350668",
 		"_collection_link": "https://www.postman.com/warped-shadow-696364/workspace/api/collection/23350668-cd8fef8d-358e-42d3-a858-09e518c5e45c?action=share&creator=23350668&source=collection_link"
 	},
 	"item": [
 		{
-			"name": "Выбрать все планееты",
+			"name": "Выбрать все планеты HTTPS",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -29,7 +29,28 @@
 			"response": []
 		},
 		{
-			"name": "Выбрать планету по ID(В данном случае 4)",
+			"name": "Выбрать все планеты http",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://swapi.dev/api/planets/",
+					"protocol": "http",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Выбрать планету по ID(В данном случае 1)",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -56,7 +77,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://swapi.dev/api/planets/schema",
+					"raw": "https://swapi.dev/api/planets/schema/",
 					"protocol": "https",
 					"host": [
 						"swapi",
@@ -65,7 +86,228 @@
 					"path": [
 						"api",
 						"planets",
-						"schema"
+						"schema",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Найти планету по имени через атрибут: Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/?search=Tatooine",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Tatooine"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Поиск планеты по несуществующему имени.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/?search=??????",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "??????"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение планеты по несуществующему ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/78000.",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						"78000."
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение планеты по отрицательному ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/-120120303",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						"-120120303"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение всех планет со второй страницы.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/?gravity=1",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						""
+					],
+					"query": [
+						{
+							"key": "gravity",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Проверка наличия необходимых полей в ответе о планете",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/1/",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Проверка метода: OPTIONS",
+			"request": {
+				"method": "OPTIONS",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Проверка метода: HEAD",
+			"request": {
+				"method": "HEAD",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/?url=https://swapi.dev/api/planets/1/",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						""
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://swapi.dev/api/planets/1/"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Проверка, запрещенного метода: Delete",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/?created=2014-12-09T13:50:49.641000Z",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						""
+					],
+					"query": [
+						{
+							"key": "created",
+							"value": "2014-12-09T13:50:49.641000Z"
+						}
 					]
 				}
 			},
